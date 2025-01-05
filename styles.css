@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+/* --------------------(Reset)------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  
+
+  /* Primary */
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Blue-footer: hsl(228, 45%, 44%);
+  /* Neutral */
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+/* --------------------(Body)------------------------*/
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: var(--Very-Dark-Blue);
+  background-color: var(--Very-Light-Gray);
+}
+
+.container {
+  margin: 90px 30px;
+}
+/* --------------------(Header)------------------------*/
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-weight: 200;
+  font-size: 1.6rem;
+}
+
+header h2 {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+header p {
+  font-size: l.05rem;
+  color: var(--Grayish-Blue);
+  margin-bottom: 70px;
+}
+
+/* --------------------(Cards-container)------------------------*/
+
+.cards-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.cards {
+  border-radius: 8px;
+  background-color: var(--Very-Light-Gray);
+  box-shadow: 3px 10px 10px var(--Grayish-Blue);
+  margin-bottom: 30px;
+  min-width: 310px;
+  max-width: 500px;
+  height: 222px;
+  overflow: hidden;
+}
+.card-1 .line {
+  background-color: var(--Cyan);
+  height: 4px;
+}
+.card-2 .line {
+  background-color: var(--Red);
+  height: 4px;
+}
+.card-3 .line {
+  background-color: var(--Orange);
+  height: 4px;
+}
+.card-4 .line {
+  background-color: var(--Blue);
+  height: 4px;
+}
+
+.content {
+  padding: 30px;
+}
+
+.content h3 {
+  margin-bottom: 15px;
+}
+
+.content p {
+  color: var(--Grayish-Blue);
+  font-size: 0.89rem;
+  margin: -15px 0 30px 0;
+}
+
+.image {
+  text-align: right;
+}
+
+/* --------------------(Footer)------------------------*/
+footer a {
+  text-decoration: none;
+}
+
+.attribution {
+  font-size: 0.73em;
+  text-align: center;
+}
+.attribution a {
+  color: var(--Blue-footer);
+}
+
+/* --------------------(Screen < 600px)------------------------*/
+@media only screen and (min-width: 600px) {
+  header {
+    max-width: 525px;
+    margin: 0 auto;
+  }
+  header h1 {
+    font-size: 2.5rem;
+  }
+  header h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* --------------------(Screen < 780px)------------------------*/
+@media only screen and (min-width: 780px) {
+  .cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    max-width: 900px;
+  }
+
+  .two-cards {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+}
+/* --------------------(Screen < 1175px)------------------------*/
+@media only screen and (min-width: 1175px) {
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+  }
+  .cards {
+    width: 355px;
+    height: 254px;
+  }
+}
